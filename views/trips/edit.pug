@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  h2 Edit Trip
+  form(action=`/trips/${trip.id}/edit`, method='POST')
+    div
+      label(for='title') Title:
+      input(type='text', name='title', value=trip.title, required=true)
+    div
+      label(for='location') Location:
+      input(type='text', name='location', value=trip.location, required=true)
+    div
+      label(for='experience') Experience:
+      textarea(name='experience', required=true)= trip.experience
+    div
+      button(type='submit') Update Trip

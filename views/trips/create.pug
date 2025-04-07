@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  h2 Add a New Trip
+  form(action='/trips/create', method='POST')
+    div
+      label(for='title') Title:
+      input(type='text', name='title', required=true)
+    div
+      label(for='location') Location:
+      input(type='text', name='location', required=true)
+    div
+      label(for='experience') Experience:
+      textarea(name='experience', required=true)
+    div
+      button(type='submit') Create Trip

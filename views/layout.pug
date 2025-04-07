@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/styles/style.css')
+  body
+    header
+      h1 Travel Journal App
+      nav
+        ul
+          li: a(href='/') Home
+          li: a(href='/trips') My Trips
+          li: a(href='/trips/create') Add Trip
+    main
+      block content
+    footer
+      p This web application was created to fulfill Web Technology module’s requirements and does not represent an actual company or service.

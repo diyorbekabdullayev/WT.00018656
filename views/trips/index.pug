@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+  h2 My Trips
+  a(href='/trips/create') Add New Trip
+  if trips.length
+    ul
+      each trip in trips
+        li
+          h3= trip.title
+          p Location: #{trip.location}
+          p Experience: #{trip.experience}
+          a(href=`/trips/${trip.id}/edit`) Edit
+          form(action=`/trips/${trip.id}/delete`, method='POST')
+            button(type='submit') Delete
+  else
+    p No trips available. Start adding your travel experiences!
