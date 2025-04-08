@@ -29,8 +29,6 @@ Project Structure:
     ├── .gitignore           # Ignored files/folders for Git (includes node_modules)
     │
     ├── /public              # Static assets for client-side
-    │   ├── /images
-    │   ├── /javascripts
     │   └── /styles
     │       └── style.css
     │
@@ -48,12 +46,10 @@ Project Structure:
     │       └── edit.pug     # Edit trip form view
     │
     ├── /controllers         # Controller logic for handling routes
-    │   ├── index.js
     │   └── /trips
     │       └── index.js
     │
     └── /services            # Service layer for business logic
-        ├── index.js
         └── /trips
             └── index.js
         
